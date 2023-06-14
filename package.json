@@ -5,8 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "jest",
-    "buiild": "tsc",
-    "publish": "npm publish",
+    "build": "tsc",
     "publish:patch": "npm version patch && npm publish"
   },
   "devDependencies": {
