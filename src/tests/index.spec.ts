@@ -1,6 +1,5 @@
 import dotenv from 'dotenv';
 import laas, { Log } from '@app';
-import { assert } from 'console';
 
 beforeAll(() => {
 	dotenv.config({ path: '.env.test' });
