@@ -3,8 +3,11 @@
   "version": "0.1.1",
   "description": "Node.js SDK for using the LAAS API",
   "main": "dist/index.js",
-  "dependencies": {
-    "axios": "^1.4.0"
+  "scripts": {
+    "test": "jest",
+    "buiild": "tsc",
+    "publish": "npm publish",
+    "publish:patch": "npm version patch && npm publish"
   },
   "devDependencies": {
     "@types/jest": "^29.5.2",
@@ -14,23 +17,11 @@
     "ts-jest": "^29.1.0",
     "typescript": "^5.1.3"
   },
-  "scripts": {
-    "test": "jest",
-    "build": "tsc"
+  "dependencies": {
+    "axios": "^1.4.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/peteradeojo/laas-node-sdk.git"
-  },
-  "keywords": [
-    "logs",
-    "logging",
-    "laas"
-  ],
-  "author": "Peter Ade-Ojo",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/peteradeojo/laas-node-sdk/issues"
-  },
-  "homepage": "https://github.com/peteradeojo/laas-node-sdk#readme"
+    "url": "https://github.com/peteradeojo/laas-node-sdk.git"
+  }
 }
