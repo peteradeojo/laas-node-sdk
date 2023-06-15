@@ -1,6 +1,13 @@
 import axios from 'axios';
 
-import { Laas as ILaas, Log } from './.d';
+export interface Log {
+	level: 'info' | 'warn' | 'error' | 'fatal' | 'debug';
+	text: string;
+}
+
+export interface ILaas {
+	sendLog: (log: Log, appToken?: string) => Promise<boolean>;
+}
 
 const Laas: ILaas = {
 	sendLog: async (log: Log, appToken?: string) => {
@@ -27,5 +34,4 @@ const Laas: ILaas = {
 	},
 };
 
-export { Log };
 export default Laas;
