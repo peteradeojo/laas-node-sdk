@@ -1,11 +1,8 @@
 import axios from 'axios';
 
-export interface Log {
-	level: 'info' | 'warn' | 'error' | 'fatal' | 'debug';
-	text: string;
-}
+import { Laas as ILaas, Log } from './.d';
 
-export default {
+const Laas: ILaas = {
 	sendLog: async (log: Log, appToken?: string) => {
 		try {
 			const response = await axios.post(
@@ -29,3 +26,6 @@ export default {
 		}
 	},
 };
+
+export { Log };
+export default Laas;
