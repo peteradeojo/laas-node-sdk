@@ -13,7 +13,7 @@ const Laas: ILaas = {
 	sendLog: async (log: Log, appToken?: string) => {
 		try {
 			const response = await axios.post(
-				'https://laas-api-nest.onrender.com/logs',
+				'https://laas-api-nest.onrender.com/v1/logs',
 				log,
 				{
 					headers: {
@@ -26,9 +26,6 @@ const Laas: ILaas = {
 
 			return false;
 		} catch (err: any) {
-			// console.error(err);
-			// console.error(err.response?.message);
-			// console.error(err.response?.status);
 			return false;
 		}
 	},
