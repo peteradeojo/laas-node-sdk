@@ -7,7 +7,7 @@ Laas is a package that allows you to send logs to a remote server. Here's how to
 To install this package, run the following command:
 
 ```bash
-npm install @peteradeojo/laas
+npm install @peteradeojo/laas-sdk
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm install @peteradeojo/laas
 To use this package in your application, first import it:
 
 ```javascript
-const laas = require('@peteradeojo/laas');
+const laas = require('@peteradeojo/laas-sdk');
 ```
 
 Then, you can use the package's `sendLog` function like this:
