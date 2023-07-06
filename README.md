@@ -18,6 +18,8 @@ To use this package in your application, first import it:
 const laas = require('@peteradeojo/laas-sdk');
 ```
 
+Set the `LAAS_APP_TOKEN` environment variable in your .env file or your environment
+
 Then, you can use the package's `sendLog` function like this:
 
 ```javascript
