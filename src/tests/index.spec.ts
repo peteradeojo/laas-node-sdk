@@ -7,7 +7,7 @@ beforeAll(() => {
 
 describe('testing laas', () => {
 	it('has sendLog as a function', () => {
-		expect(Object.getOwnPropertyNames(laas).includes('sendLog')).toBe(true);
+		expect('sendLog' in laas).toBe(true);
 		expect(typeof laas.sendLog).toBe('function');
 	});
 

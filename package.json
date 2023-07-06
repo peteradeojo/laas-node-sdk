@@ -6,7 +6,9 @@
   "scripts": {
     "test": "jest",
     "build": "tsc",
-    "publish:patch": "npm version patch && npm publish"
+    "publish:patch": "npm version patch && npm publish",
+    "publish:major": "npm version major && npm publish",
+    "publish:minor": "npm version minor && npm publish"
   },
   "devDependencies": {
     "@types/jest": "^29.5.2",
