@@ -13,7 +13,7 @@ const Laas: ILaas = {
 	sendLog: async (log: Log, appToken?: string) => {
 		try {
 			const response = await axios.post(
-				'https://laas-api-nest.onrender.com/v1/logs',
+				'https://laas-api.up.railway.app/v1/logs',
 				log,
 				{
 					headers: {
