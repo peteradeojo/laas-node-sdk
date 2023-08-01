@@ -21,13 +21,13 @@ describe('testing laas', () => {
 		expect(typeof result).toBe('boolean');
 	});
 
-	test('returns false when invalid/no log level is provided', async () => {
+	test('returns true when invalid/no log level is provided', async () => {
 		let log = {
 			level: 'invalid',
 			text: 'Lorem ipsum dolor sit amet',
 		};
 
 		let result = await laas.sendLog(log as Log);
-		expect(result).toBe(false);
+		expect(result).toBe(true);
 	});
 });

@@ -27,7 +27,7 @@ const Laas: ILaas = {
 			return false;
 		} catch (err: any) {
 			if ('response' in err) {
-				// console.error(err.response.data);
+				console.error(err.response.data);
 			}
 			return false;
 		}
