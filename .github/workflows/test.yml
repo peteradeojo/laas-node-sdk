@@ -3,6 +3,9 @@ on:
   push:
     branches: [master, main]
 
+env:
+  LAAS_APP_TOKEN: ${{ secrets.LAAS_APP_TOKEN }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
