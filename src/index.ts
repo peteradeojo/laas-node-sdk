@@ -3,6 +3,8 @@ import axios from 'axios';
 export interface Log {
 	level: 'info' | 'warn' | 'error' | 'fatal' | 'debug';
 	text: string;
+	tag?: string;
+	context?: any;
 }
 
 export interface ILaas {
