@@ -21,7 +21,7 @@ describe('testing laas', () => {
 		expect(typeof result).toBe('boolean');
 	});
 
-	test('returns true when invalid/no log level is provided', async () => {
+	test('returns false when invalid/no log level is provided', async () => {
 		let log = {
 			level: 'invalid',
 			text: 'Lorem ipsum dolor sit amet',
