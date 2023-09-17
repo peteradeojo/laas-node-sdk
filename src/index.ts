@@ -4,7 +4,7 @@ export interface Log {
 	level: 'info' | 'warn' | 'error' | 'fatal' | 'debug';
 	text: string;
 	tag?: string;
-	context?: any;
+	context?: Record<string, string>;
 }
 
 export interface ILaas {
@@ -19,7 +19,7 @@ const Laas: ILaas = {
 				log,
 				{
 					headers: {
-						APP_ID: appToken || process.env.LAAS_APP_TOKEN,
+						APP_ID: appToken || process.env.LAAS_APP_TOKEN || process.env.LAAS_TOKEN,
 					},
 				}
 			);

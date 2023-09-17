@@ -13,7 +13,7 @@ describe('testing laas', () => {
 
 	test('returns a boolean result', async () => {
 		let log: Log = {
-			level: 'info',
+			level: 'fatal',
 			text: 'Lorem ipsum dolor sit amet',
 		};
 
@@ -25,6 +25,20 @@ describe('testing laas', () => {
 		let log = {
 			level: 'invalid',
 			text: 'Lorem ipsum dolor sit amet',
+		};
+
+		let result = await laas.sendLog(log as Log);
+		expect(result).toBe(false);
+	});
+
+	test('send log with context', async () => {
+		let log = {
+			level: 'debug',
+			text: 'Lorem ipsum dolor sit amet',
+			context: {
+				foo: 'bar',
+				lorem: 'ipsum',
+			},
 		};
 
 		let result = await laas.sendLog(log as Log);
