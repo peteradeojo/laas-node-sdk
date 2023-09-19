@@ -26,6 +26,7 @@ Then, you can use the package's `sendLog` function like this:
 const log = {
   level: 'info',
   text: 'Lorem ipsum dolor sit amet',
+  context: {} // an object containing any other useful information you want to supply,
 };
 
 const result = await laas.sendLog(log);
